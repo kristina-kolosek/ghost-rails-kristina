@@ -1,0 +1,181 @@
+
+// ------------ margin ----------------
+
+.margin-tiny {
+  margin: 5px;
+}
+
+.margin-small {
+  margin: 10px;
+}
+
+.margin-medium {
+  margin: 15px;
+}
+
+.margin-large {
+  margin: 25px;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+// --------- margin top ----------
+
+.margin-top-tiny {
+  margin-top: 5px !important;
+}
+
+.margin-top-small {
+  margin-top: 10px !important;
+}
+
+.margin-top-medium {
+  margin-top: 15px !important;
+}
+
+.margin-top-large {
+  margin-top: 25px !important;
+}
+
+.margin-top-xlarge {
+  margin-top: 40px !important;
+}
+
+._margin-top-xxlarge {
+  margin-top: 65px !important;
+}
+
+._margin-top-xxxlarge {
+  margin-top: 80px !important;
+}
+
+.margin-top-tiny-negative {
+  margin-top: -5px;
+}
+
+.margin-top-small-negative {
+  margin-top: -10px !important;
+}
+
+.margin-top-medium-negative {
+  margin-top: -15px !important;
+}
+
+.margin-top-large-negative {
+  margin-top: -30px !important;
+}
+
+// --------- margin bottom ----------
+
+.margin-bottom-none {
+  margin-bottom: 0 !important;
+}
+
+.margin-bottom-tiny {
+  margin-bottom: 5px;
+}
+
+.margin-bottom-small {
+  margin-bottom: 10px !important;
+}
+
+.margin-bottom-medium {
+  margin-bottom: 15px !important;
+}
+
+.margin-bottom-large {
+  margin-bottom: 20px !important;
+}
+
+.margin-bottom-xlarge {
+  margin-bottom: 40px !important;
+}
+
+.margin-bottom-xxlarge {
+  margin-bottom: 65px !important;
+}
+
+._margin-bottom-xxxlarge {
+  margin-bottom: 80px;
+}
+
+.margin-bottom-large-negative {
+  margin-top: -35px !important;
+}
+
+.margin-bottom-very-large {
+  margin-bottom: 140px;
+}
+
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+
+// ------------ margin left ------------
+
+.margin-left-xsmall {
+  margin-left: 3px !important;
+}
+
+.margin-left-tiny {
+  margin-left: 5px !important;
+}
+
+.margin-left-small {
+  margin-left: 10px !important;
+}
+
+.margin-left-medium {
+  margin-left: 15px !important;
+}
+
+.margin-left-large {
+  margin-left: 25px !important;
+}
+
+.margin-left-xlarge {
+  margin-left: 40px !important;
+}
+
+.margin-left-80 {
+  margin-left: 80px !important;
+}
+
+// ------------ margin right ------------
+
+.margin-right-tiny{
+  margin-right: 5px !important;
+}
+
+.margin-right-small {
+  margin-right: 10px !important;
+}
+
+.margin-right-medium {
+  margin-right: 15px !important;
+}
+
+.margin-right-large {
+  margin-right: 25px !important;
+}
+
+.margin-right-xlarge {
+  margin-right: 40px !important;
+}
+
+.margin-right-80 {
+  margin-right: 80px !important;
+}
+
+._unmargin{
+  
+  &.-top {
+    margin-top: 0px !important;
+  }
+}
+
+
+
+

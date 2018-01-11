@@ -6,9 +6,80 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,500,700" rel="stylesheet">
+    <script src="https://use.fontawesome.com/90b92514d7.js"></script>
   </head>
 
   <body>
-    <%= yield %>
+
+    <main class="layout">
+      <div class="layout-nav">
+
+        <div class="nav-menu">
+          <div class="navicon">
+          </div>
+          <div class="nav-details">
+            <div class="blogname">Kolosek</div>
+            <div class="username">Tatjana B.</div>
+          </div>
+
+
+          <div class="dropdown">
+            <button class="btn dropdown-toggle detailsbtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-chevron-down detailsicon" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Log out</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-body">
+
+          <div class="nav-search">
+            <div class="searcharea">
+              <input class="searchinput" type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="combobox" placeholder="Search">
+              <button class="btn searchbutton" data-ember-action="" data-ember-action-650="650"><i class="fa fa-search searchicon" aria-hidden="true"></i><span class="sr-only">Search</span></button>
+            </div>
+          </div>
+
+          <ul class="nav-list">
+            <li class="list-item">
+              <a href="#" class="listlink">
+                <i class="fa fa-pencil listicon" aria-hidden="true"></i>
+                New story
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="listlink">
+                <i class="fa fa-tasks listicon" aria-hidden="true"></i>
+                Stories
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="listlink">
+                <i class="fa fa-users listicon" aria-hidden="true"></i>
+                Team
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+        <footer class="nav-footer">
+          <a href="#" class="footerlink">
+            View site
+            <i class="fa fa-external-link footericon" aria-hidden="true"></i>
+          </a>
+        </footer>
+
+      </div>
+
+
+      <div class="layout-content">
+        <%= yield %>
+      </div>
+
+    </main>
   </body>
 </html>
