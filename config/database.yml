@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: <%= Settings.DATABASE_USERNAME %>
+  password: <%= Settings.DATABASE_PASSWORD %>
+
+development:
+  <<: *default
+  database: ghostrails_development
+
+test:
+  <<: *default
+  database: ghostrails_test
+
+production:
+  <<: *default
+  database: ghostrails_production
