@@ -1,5 +1,6 @@
 <div class="auth-container">
   <h1 class="header">Create your account</h1>
+  <p class="alert"><%= alert %></p>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <div class="auth-form --signup">
       <%= image_tag "default-avatar.png", :class => "avatar-placeholder" %>
@@ -41,5 +42,4 @@
       </button>
     </div>
   <% end %>
-  <p class="alert"><%= alert %></p>
 </div>
