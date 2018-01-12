@@ -29,6 +29,8 @@ gem "rubocop", require: false
 # rollbar to catch exceptions
 gem "rollbar"
 gem "oj", "~> 2.12.14"
+# Devise for authentication
+gem 'devise'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
