@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe User, type: :model do
   it { should have_db_column(:email).of_type(:string) }
@@ -16,4 +16,30 @@ RSpec.describe User, type: :model do
   it { should have_db_column(:last_sign_in_at).of_type(:datetime) }
   it { should have_db_column(:created_at).of_type(:datetime) }
   it { should have_db_column(:updated_at).of_type(:datetime) }
+
+  before :each do
+    @user = FactoryGirl.create(:user)
+  end
+
+  describe "Handling admins and authors" do
+    it "should return admin for this user" do
+      expect(@user.admin?).to be true
+      expect(@user.author?).to be false
+    end
+
+    it "should change admin to author" do
+      @user.author!
+      @user.reload
+      expect(@user.admin?).to be false
+      expect(@user.author?).to be true
+    end
+
+    it "should change author to admin" do
+      @user.author!
+      @user.admin!
+      @user.reload
+      expect(@user.admin?).to be true
+      expect(@user.author?).to be false
+    end
+  end
 end

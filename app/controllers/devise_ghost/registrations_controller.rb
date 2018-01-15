@@ -3,7 +3,7 @@ class DeviseGhost::RegistrationsController < Devise::RegistrationsController
 
   def new
     if !User.count.zero?
-      redirect_to new_user_session_url
+      redirect_to new_user_session_path
       return
     end
     build_resource

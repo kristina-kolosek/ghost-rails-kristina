@@ -3,7 +3,7 @@ class DeviseGhost::SessionsController < Devise::SessionsController
 
   def new
     if User.count.zero?
-      redirect_to register_url
+      redirect_to register_path
       return
     end
     self.resource = resource_class.new(sign_in_params)
