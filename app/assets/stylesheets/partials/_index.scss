@@ -84,8 +84,17 @@
 }
 
 .alert {
-  color: #f05230;
-  font-size: 18px;
-  margin-top: 15px;
+  align-self: center;
+  background: #f05230;
+  width: 50%;
+  left: 25%;
+  top: 0px;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  margin: 0px;
+  padding: 2px;
   position: absolute;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }

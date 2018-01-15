@@ -24,6 +24,7 @@
   <% end %>
 
   <div class="margin-bottom" />
-
-  <p class="alert"><%= alert %></p>
+  <% if alert.present? %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
 </div>
