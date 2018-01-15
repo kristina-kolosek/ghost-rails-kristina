@@ -1,4 +1,4 @@
-class DeviseGhost::RegistrationsController < Devise::RegistrationsController
+class Users::RegistrationsController < Devise::RegistrationsController
   layout "authentication"
 
   def new

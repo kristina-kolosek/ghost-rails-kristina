@@ -1,4 +1,4 @@
-class DeviseGhost::SessionsController < Devise::SessionsController
+class Users::SessionsController < Devise::SessionsController
   layout "authentication"
 
   def new
