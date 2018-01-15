@@ -24,13 +24,11 @@ RSpec.describe User, type: :model do
   describe "Handling admins and authors" do
     it "should return admin for this user" do
       expect(@user.admin?).to be true
-      expect(@user.author?).to be false
     end
 
     it "should change admin to author" do
       @user.author!
       @user.reload
-      expect(@user.admin?).to be false
       expect(@user.author?).to be true
     end
 
@@ -39,7 +37,6 @@ RSpec.describe User, type: :model do
       @user.admin!
       @user.reload
       expect(@user.admin?).to be true
-      expect(@user.author?).to be false
     end
   end
 end
