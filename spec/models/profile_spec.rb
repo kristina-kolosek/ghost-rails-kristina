@@ -12,17 +12,17 @@ RSpec.describe Profile, type: :model do
   end
 
   describe "Handling admins and authors" do
-    it "should return admin for this profile" do
+    it "is admin for user profile" do
       expect(@profile.admin?).to be true
     end
 
-    it "should change admin to author" do
+    it "changes admin to author" do
       @profile.author!
       @profile.reload
       expect(@profile.author?).to be true
     end
 
-    it "should change author to admin" do
+    it "changes author to admin" do
       @profile.author!
       @profile.admin!
       @profile.reload

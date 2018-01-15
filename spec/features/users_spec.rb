@@ -29,7 +29,7 @@ RSpec.describe "Users" do
     end
 
     describe "DELETE session#destroy" do
-      it "destroy current user session" do
+      it "destroys current user session" do
         login_as(@user, scope: :user)
         visit root_path
         find("#logout").click

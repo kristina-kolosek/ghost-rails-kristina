@@ -6,10 +6,7 @@ class Profile < ApplicationRecord
   ADMIN = 1
   AUTHOR = 2
 
-  before_validation(on: :create) do
-    puts fullname
-    self.slug = fullname.downcase.split(" ").join("-")
-  end
+  before_validation :generate_slug, on: :create
 
   def admin?
     role == ADMIN
@@ -35,5 +32,11 @@ class Profile < ApplicationRecord
   def author!
     self.role = AUTHOR
     save!
+  end
+
+  private
+
+  def generate_slug
+    self.slug = fullname.downcase.split(" ").join("-")
   end
 end
