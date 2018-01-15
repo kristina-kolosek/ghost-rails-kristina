@@ -4,6 +4,16 @@
 require "rubygems"
 require "capybara/rspec"
 
+require 'simplecov'
+SimpleCov.start do
+  add_group 'Controllers', 'app/controllers'
+  add_group 'Models', 'app/models'
+  add_group 'Helpers', 'app/helpers'
+  add_group 'Mailers', 'app/mailers'
+  add_group 'Views', 'app/views'
+end
+puts 'simplecov required'
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     # This option makes the `description` and `failure_message` of custom
