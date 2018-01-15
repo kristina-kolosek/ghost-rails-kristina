@@ -4,15 +4,15 @@
 require "rubygems"
 require "capybara/rspec"
 
-require 'simplecov'
+require "simplecov"
 SimpleCov.start do
-  add_group 'Controllers', 'app/controllers'
-  add_group 'Models', 'app/models'
-  add_group 'Helpers', 'app/helpers'
-  add_group 'Mailers', 'app/mailers'
-  add_group 'Views', 'app/views'
+  add_group "Controllers", "app/controllers"
+  add_group "Models", "app/models"
+  add_group "Helpers", "app/helpers"
+  add_group "Mailers", "app/mailers"
+  add_group "Views", "app/views"
 end
-puts 'simplecov required'
+puts "simplecov required"
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

@@ -14,7 +14,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     build_resource(sign_up_params)
-    resource.admin
+    resource.profile = Profile.create(
+      user: resource,
+      fullname: params[:user][:profile][:fullname],
+      role: Profile::ADMIN,
+    )
     resource.save
     yield resource if block_given?
     if resource.persisted?
@@ -30,11 +34,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     else
       clean_up_passwords resource
       set_minimum_password_length
-      respond_with resource
+      # respond_with resource
     end
   end
 
   def sign_up_params
-    params.require(:user).permit(:email, :fullname, :password)
+    params.require(:user).permit(:email, :password)
   end
 end

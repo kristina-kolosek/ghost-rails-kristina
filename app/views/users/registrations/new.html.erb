@@ -15,13 +15,15 @@
             placeholder: "Eg. johnh.watson@gmail.com"
         %>
       </div>
-      <div class="form-group">
-        <%= f.label :fullname, "Full name", class: "lbl" %>
-        <%= f.text_field :fullname,
-            class: "field",
-            placeholder: "Eg. John H. Watson"
-        %>
-      </div>
+      <%= f.fields_for :profile do |person_fields| %>
+        <div class="form-group">
+          <%= person_fields.label :fullname, "Full name", class: "lbl" %>
+          <%= person_fields.text_field :fullname,
+              class: "field",
+              placeholder: "Eg. John H. Watson"
+          %>
+        </div>
+      <% end %>
       <div class="form-group">
         <%= f.label :password, "Password", class: "lbl" %>
         <%= f.password_field :password,
