@@ -17,8 +17,8 @@
       </div>
       <%= f.fields_for :profile do |person_fields| %>
         <div class="form-group">
-          <%= person_fields.label :fullname, "Full name", class: "lbl" %>
-          <%= person_fields.text_field :fullname,
+          <%= person_fields.label :full_name, "Full name", class: "lbl" %>
+          <%= person_fields.text_field :full_name,
               class: "field",
               placeholder: "Eg. John H. Watson"
           %>

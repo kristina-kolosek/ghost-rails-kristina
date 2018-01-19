@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :profile do
-    fullname "John Doe"
-    role Profile::ADMIN
+    full_name "John Doe"
     user
   end
 end

@@ -1,42 +1,13 @@
 class Profile < ApplicationRecord
   belongs_to :user
 
-  validates :fullname, :slug, :role, presence: true
-
-  ADMIN = 1
-  AUTHOR = 2
+  validates :full_name, :slug, presence: true
 
   before_validation :generate_slug, on: :create
-
-  def admin?
-    role == ADMIN
-  end
-
-  def admin
-    self.role = ADMIN
-  end
-
-  def admin!
-    self.role = ADMIN
-    save!
-  end
-
-  def author?
-    role == AUTHOR
-  end
-
-  def author
-    self.role = AUTHOR
-  end
-
-  def author!
-    self.role = AUTHOR
-    save!
-  end
 
   private
 
   def generate_slug
-    self.slug = fullname.downcase.split(" ").join("-")
+    self.slug = full_name.downcase.split(" ").join("-")
   end
 end

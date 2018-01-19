@@ -5,7 +5,7 @@ RSpec.describe "Users" do
     it "creates a new user" do
       visit register_path
       fill_in "user_email", with: "john@example.com"
-      fill_in "user_profile_fullname", with: "John Jonson"
+      fill_in "user_profile_full_name", with: "John Jonson"
       fill_in "user_password", with: "password"
       find(".button").click
       expect(current_path).to eql(root_path)
