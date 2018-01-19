@@ -1,9 +1,41 @@
+@import "bootstrap";
+
 .layout {
   display: flex;
   height: 100vh;
 }
 
 //right content section
+
+.authentication-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8vh;
+  margin: 0 5%;
+  width: 100%;
+}
+
+.auth-container {
+  -webkit-box-direction: normal;
+  color: #738a94;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.9rem;
+  font-weight: 100;
+  line-height: 1.5em;
+  max-width: 800px;
+  width: 100%;
+
+  .header {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
 
 .layout-content {
   background-color: #fff;
@@ -49,4 +81,20 @@
     text-shadow: 0 -1px 0 rgba(0,0,0,.1);
     font-size: 13px;
   }
+}
+
+.alert {
+  align-self: center;
+  background: #f05230;
+  width: 50%;
+  left: 25%;
+  top: 0px;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  margin: 0px;
+  padding: 2px;
+  position: absolute;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
