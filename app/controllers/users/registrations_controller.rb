@@ -14,12 +14,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     build_resource(sign_up_params)
-    admin_role = Role.where(role_type: "admin").take
     resource.create_profile(full_name: params[:user][:profile][:full_name])
-    UserRole.create(
-      role: admin_role,
-      user: resource,
-    )
     resource.save
     yield resource if block_given?
     if resource.persisted?
