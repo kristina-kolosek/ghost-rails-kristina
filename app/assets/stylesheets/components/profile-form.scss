@@ -1,0 +1,38 @@
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 700px;
+  width: 80%;
+  position: relative;
+
+  .lbl {
+    font-size: 14px;
+    margin: 0px;
+    line-height: 18px;
+    font-weight: bold;
+  }
+
+  .field {
+    border: 1px solid #dae1e3;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 10px 10px 10px 35px;
+    border-radius: 4px;
+    color: #4b5b62;
+    display: block;
+    height: 44px;
+    width: 100%;
+    font-family: inherit;
+
+    &.--area {
+      min-height: 120px;
+    }
+  }
+
+  .helper-text {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #888;
+  }
+}

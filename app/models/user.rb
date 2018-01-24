@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_one :profile, dependent: :destroy, autosave: true
 
   delegate :full_name, to: :profile
+  delegate :slug, to: :profile
 
   has_many :user_roles
   has_many :roles, through: :user_roles
@@ -15,7 +16,7 @@ class User < ApplicationRecord
   validates :email, :password, presence: true
 
   def admin?
-    false
+    roles.any? { |role| role.role_type == "admin" }
   end
 
   private

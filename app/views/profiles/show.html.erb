@@ -1,0 +1,36 @@
+<div class="profile-page">
+  <div class="cover-placeholder">
+  </div>
+  <%= form_for(@profile,
+   :html => {:class => 'profile-form'}) do |f| %>
+     <div class="form-group">
+      <%= f.label :full_name, "Full name", class: "lbl" %>
+      <%= f.text_field :full_name,
+          class: "field",
+          placeholder: "Full Name"
+      %>
+      <p class="helper-text">
+        Use your real name so people can recognize you
+      </p>
+    </div>
+    <div class="form-group">
+      <%= f.label :slug, "Slug", class: "lbl" %>
+      <%= f.text_field :slug,
+          class: "field",
+          placeholder: "Slug"
+      %>
+      <p class="helper-text">
+        <%= display_slug(@profile) %>
+      </p>
+    </div>
+    <div class="form-group">
+      <%= f.label :biography, "Bio", class: "lbl" %>
+      <%= f.text_area :biography,
+          class: "field --area"
+      %>
+      <p class="helper-text">
+        Write about you, in 200 characters or less
+      </p>
+    </div>
+  <% end %>
+</div>

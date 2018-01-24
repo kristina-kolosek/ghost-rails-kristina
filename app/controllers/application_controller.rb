@@ -5,4 +5,10 @@ class ApplicationController < ActionController::Base
 
   def index
   end
+
+  def require_admin!
+    if !current_user.admin?
+      redirect_to root_path
+    end
+  end
 end
