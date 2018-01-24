@@ -29,9 +29,13 @@ gem "rubocop", require: false
 # rollbar to catch exceptions
 gem "rollbar"
 gem "oj", "~> 2.12.14"
+# Devise for authentication
+gem 'devise'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Authorization
+gem 'pundit'
 # Use CoffeeScript for .coffee assets and views
 gem "coffee-rails", "~> 4.2"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -51,9 +55,16 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem "capybara", "~> 2.13"
+  gem "simplecov", require: false
   gem "selenium-webdriver"
   gem "database_cleaner"
   gem "rspec-rails"
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'shoulda'
+  gem 'shoulda-matchers'
 end
 
 group :development do

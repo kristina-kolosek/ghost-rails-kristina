@@ -1,0 +1,41 @@
+<div class="auth-container">
+  <h1 class="header">Create your account</h1>
+  <% if alert.present? %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <div class="auth-form --signup">
+      <%= image_tag "default-avatar.png", :class => "avatar-placeholder" %>
+      <div class="form-group">
+        <%= f.label :email, "Email address", class: "lbl" %>
+        <%= f.email_field :email,
+            autofocus: true,
+            autocomplete: "email",
+            class: "field",
+            placeholder: "Eg. johnh.watson@gmail.com"
+        %>
+      </div>
+      <%= f.fields_for :profile do |person_fields| %>
+        <div class="form-group">
+          <%= person_fields.label :full_name, "Full name", class: "lbl" %>
+          <%= person_fields.text_field :full_name,
+              class: "field",
+              placeholder: "Eg. John H. Watson"
+          %>
+        </div>
+      <% end %>
+      <div class="form-group">
+        <%= f.label :password, "Password", class: "lbl" %>
+        <%= f.password_field :password,
+            class: "field",
+            placeholder: "At least 8 characters"
+        %>
+      </div>
+    </div>
+    <div class="signup-button-container">
+      <button class="btn button --green --wide">
+        Create Account
+      </button>
+    </div>
+  <% end %>
+</div>

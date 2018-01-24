@@ -1,6 +1,18 @@
 # The generated `.rspec` file contains `--require spec_helper` which will cause
 # this file to always be loaded, without a need to explicitly require it in any
 # files.
+require "rubygems"
+require "capybara/rspec"
+
+require "simplecov"
+SimpleCov.start do
+  add_group "Controllers", "app/controllers"
+  add_group "Models", "app/models"
+  add_group "Helpers", "app/helpers"
+  add_group "Mailers", "app/mailers"
+  add_group "Views", "app/views"
+end
+puts "simplecov required"
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
