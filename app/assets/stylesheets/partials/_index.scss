@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "base/colors";
 
 .layout {
   display: flex;
@@ -38,7 +39,7 @@
 }
 
 .layout-content {
-  background-color: #fff;
+  background-color: $white;
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
@@ -76,8 +77,8 @@
   .header-breadcrumbs {
     align-items: center;
     display: flex;
-    justify-content: flex-start;
     flex-direction: row;
+    justify-content: flex-start;
   }
 
   .actionbtn {
@@ -89,13 +90,13 @@
     transition: none;
     -webkit-transition: none;
     border: 0;
-    fill: #fff;
-    color: #fff;
+    fill: $white;
+    color: $white;
     text-shadow: 0 -1px 0 rgba(0,0,0,.1);
     font-size: 13px;
 
     &.--blue {
-      background: linear-gradient(#4ab6f0,#2fa5e4 60%,#2fa5e4 90%,#38a9e5);
+      background: linear-gradient($light-blue,$dark-blue 60%,$dark-blue 90%,$medium-blue);
     }
   }
 }

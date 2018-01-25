@@ -1,22 +1,25 @@
+@import "base/colors";
+
+
 .profile-form {
   display: flex;
   flex-direction: column;
-  text-align: left;
   max-width: 700px;
   position: relative;
+  text-align: left;
   width: 80%;
 
   .lbl {
     font-size: 14px;
     font-weight: bold;
     line-height: 18px;
-    margin: 0px;
+    margin: 0;
   }
 
   .field {
-    border: 1px solid #dae1e3;
+    border: 1px solid $field-border;
     border-radius: 4px;
-    color: #4b5b62;
+    color: $input-color;
     display: block;
     font-family: inherit;
     font-size: 18px;
@@ -31,7 +34,7 @@
   }
 
   .helper-text {
-    color: #888;
+    color: $helper-text;
     font-size: 13px;
     margin-top: 5px;
   }
