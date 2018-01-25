@@ -11,9 +11,9 @@ Rails.application.routes.draw do
     delete 'signout', to: 'devise/sessions#destroy', as: :destroy_user_session
   end
 
-  resources :profiles, :only => [:index]
+  resources :profiles, :only => [:index, :update]
 
-  get 'authors/:slug', to: 'profiles#show', as: :profile
+  get 'authors/:slug', to: 'profiles#edit', as: :edit_profile
 
   root 'application#index'
 end

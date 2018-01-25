@@ -56,16 +56,28 @@
   display: flex;
   -webkit-box-pack: justify;
   flex-shrink: 0;
+  margin-bottom: 20px;
   justify-content: space-between;
 
   .title {
-    font-size: 29px;
+    font-size: 25px;
     font-weight: 700;
     letter-spacing: .4px;
     margin: 0;
     min-height: 35px;
     padding: 0;
     white-space: nowrap;
+  }
+
+  .chevron-icon {
+    margin: 10px;
+  }
+
+  .header-breadcrumbs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
   }
 
   .actionbtn {
@@ -81,6 +93,10 @@
     color: #fff;
     text-shadow: 0 -1px 0 rgba(0,0,0,.1);
     font-size: 13px;
+
+    &.--blue {
+      background: linear-gradient(#4ab6f0,#2fa5e4 60%,#2fa5e4 90%,#38a9e5);
+    }
   }
 }
 
