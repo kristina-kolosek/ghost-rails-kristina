@@ -31,5 +31,4 @@ class ProfilesController < ApplicationController
   def user_params
     params.require(:profile).permit(user: [:email])
   end
-
 end
