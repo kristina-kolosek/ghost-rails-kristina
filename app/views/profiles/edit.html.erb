@@ -1,0 +1,62 @@
+<div class="profile-page">
+  <%= form_for(@profile) do |f| %>
+    <header class="layout-header">
+      <section class="header-breadcrumbs">
+        <h2 class="title">Team</h2>
+        <%= image_tag 'chevron-right.jpg', size: '15x25', class: 'chevron-icon'%>
+        <h2 class="title"><%= @profile.full_name %></h2>
+      </section>
+      <section class="header-actions">
+        <%= f.submit "Save", class: "btn actionbtn --blue" %>
+      </section>
+    </header>
+    <div class="cover-placeholder">
+    </div>
+    <div class="profile-form">
+      <div class="form-group">
+        <%= f.label :full_name, "Full name", class: "lbl" %>
+        <%= f.text_field :full_name,
+            required: true,
+            class: "field",
+            placeholder: "Full Name"
+        %>
+        <p class="helper-text">
+          Use your real name so people can recognize you
+        </p>
+      </div>
+      <div class="form-group">
+        <%= f.label :slug, "Slug", class: "lbl" %>
+        <%= f.text_field :slug,
+            required: true,
+            class: "field",
+            placeholder: "Slug"
+        %>
+        <p class="helper-text">
+          <%= display_slug(@profile) %>
+        </p>
+      </div>
+      <%= f.fields_for current_user do |user| %>
+        <div class="form-group">
+          <%= user.label :email, "Email", class: "lbl" %>
+          <%= user.text_field :email,
+              required: true,
+              class: "field",
+              placeholder: "Email"
+          %>
+          <p class="helper-text">
+            Used for notifications
+          </p>
+        </div>
+      <% end %>
+      <div class="form-group">
+        <%= f.label :biography, "Bio", class: "lbl" %>
+        <%= f.text_area :biography,
+            class: "field --area"
+        %>
+        <p class="helper-text">
+          Write about you, in 200 characters or less
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>

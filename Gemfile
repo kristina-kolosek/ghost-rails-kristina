@@ -65,6 +65,8 @@ end
 group :test do
   gem 'shoulda'
   gem 'shoulda-matchers'
+  # Code analysis
+  gem "codeclimate-test-reporter", "~> 1.0.0"
 end
 
 group :development do

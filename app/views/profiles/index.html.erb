@@ -1,0 +1,12 @@
+<%  @users.each do |user| %>
+  <%= link_to edit_profile_path(slug: user.slug), class: "row" do %>
+    <div class="user-info">
+      <p class="bold-text">
+        <%= user.full_name %>
+      </p>
+      <p>
+        Last seen: <%= last_login(user) %>
+      </p>
+    </div>
+  <% end %>
+<% end %>

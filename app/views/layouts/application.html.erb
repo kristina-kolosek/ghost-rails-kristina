@@ -31,7 +31,8 @@
               <i class="fa fa-chevron-down detailsicon" aria-hidden="true"></i>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, :class => "dropdown-item", :id => "logout" %>
+              <%= link_to "Your profile", edit_profile_path(slug: current_user.slug), class: "dropdown-item", :id => "profile" %>
+              <%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => "dropdown-item", :id => "logout" %>
             </div>
           </div>
         </div>
@@ -58,12 +59,15 @@
                 Stories
               </a>
             </li>
-            <li class="list-item">
-              <a href="#" class="listlink">
-                <i class="fa fa-users listicon" aria-hidden="true"></i>
-                Team
-              </a>
-            </li>
+
+            <% if current_user.admin? %>
+              <li class="list-item">
+                <%= link_to profiles_path, class: "listlink" do %>
+                  <i class="fa fa-users listicon" aria-hidden="true"></i>
+                  Team
+                <% end %>
+              </li>
+            <% end %>
           </ul>
 
         </div>

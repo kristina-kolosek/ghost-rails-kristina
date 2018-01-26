@@ -1,0 +1,41 @@
+@import "base/colors";
+
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  position: relative;
+  text-align: left;
+  width: 80%;
+
+  .lbl {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  .field {
+    border: 1px solid $field-border;
+    border-radius: 4px;
+    color: $input-color;
+    display: block;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 100;
+    height: 44px;
+    padding: 10px 10px 35px;
+    width: 100%;
+
+    &.--area {
+      min-height: 120px;
+    }
+  }
+
+  .helper-text {
+    color: $helper-text;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+}
