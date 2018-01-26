@@ -1,6 +1,8 @@
 # The generated `.rspec` file contains `--require spec_helper` which will cause
 # this file to always be loaded, without a need to explicitly require it in any
 # files.
+require "codeclimate-test-reporter" CodeClimate::TestReporter.start
+
 require "rubygems"
 require "capybara/rspec"
 
