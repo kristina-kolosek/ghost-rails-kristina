@@ -1,13 +1,14 @@
 class ProfilesController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_admin!, only: [:index]
 
   def index
+    authorize Profile
     @users = User.all
   end
 
   def edit
     @profile = Profile.where(slug: params[:slug]).take
+    authorize @profile
   end
 
   def update
