@@ -1,26 +1,27 @@
+@import "base/colors";
 
 .auth-form {
+  background: $auth-background;
+  border: 1px solid $field-border;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   margin: 30px auto;
-  background: #f8fbfd;
-  border: 1px solid #dae1e3;
-  border-radius: 5px;
   max-width: 450px;
   padding: 45px;
+  position: relative;
   text-align: left;
   width: 100%;
-  position: relative;
 
   .avatar-placeholder {
-    height: 80px;
-    width: 80px;
+    background-color: $avatar-background;
+    border: 3px solid $white;
     border-radius: 50%;
+    left: calc(50% - 40px);
+    height: 80px;
     position: absolute;
     top: -40px;
-    left: calc(50% - 40px);
-    background-color: #C6DAE3;
-    border: 3px solid white;
+    width: 80px;
     -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,.60);
   }
 
@@ -32,27 +33,30 @@
 
   .lbl {
     font-size: 14px;
-    margin: 0px;
-    line-height: 18px;
     font-weight: bold;
+    line-height: 18px;
+    margin: 0;
   }
 
   .field {
-    border: 1px solid #dae1e3;
+    border: 1px solid $field-border;
+    border-radius: 4px;
+    color: $input-color;
+    display: block;
+    font-family: inherit;
     font-size: 18px;
     font-weight: 100;
-    padding: 10px 10px 10px 35px;
-    border-radius: 4px;
-    color: #4b5b62;
-    display: block;
     height: 44px;
+    padding: 10px 10px 35px;
     width: 100%;
-    font-family: inherit;
   }
 }
 
 .button {
   border-radius: 5px;
+  box-shadow: 0 1px 0 $box-shadow;
+  color: $white;
+  fill: $white;
   font-size: 16px;
   font-weight: 400;
   height: 40px;
@@ -60,15 +64,11 @@
   overflow: hidden;
   padding: 0 12px;
   text-align: center;
-  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.12);
-  box-shadow: 0 1px 0 rgba(0,0,0,.12);
-  color: #fff;
-  fill: #fff;
   text-shadow: 0 -1px 0 rgba(0,0,0,.1);
   transition: none !important;
 
    &.--blue {
-     background: linear-gradient(#4ab6f0,#2fa5e4 60%,#2fa5e4 90%,#38a9e5);
+     background: linear-gradient($light-blue, $dark-blue 60%, $dark-blue 90%, $medium-blue);
    }
 
    &.--green {
@@ -81,10 +81,10 @@
 }
 
 .signup-button-container {
-  max-width: 450px;
-  margin-top: 10px;
-  width: 100%;
   margin: auto;
+  margin-top: 10px;
+  max-width: 450px;
+  width: 100%;
 }
 
 .margin-bottom {

@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "base/colors";
 
 .layout {
   display: flex;
@@ -38,12 +39,13 @@
 }
 
 .layout-content {
-  background-color: #fff;
+  background-color: $white;
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
   padding: 24px 4vw 3vw;
   position: relative;
+  overflow: auto;
 }
 
 .layout-header {
@@ -55,16 +57,28 @@
   display: flex;
   -webkit-box-pack: justify;
   flex-shrink: 0;
+  margin-bottom: 20px;
   justify-content: space-between;
 
   .title {
-    font-size: 29px;
+    font-size: 25px;
     font-weight: 700;
     letter-spacing: .4px;
     margin: 0;
     min-height: 35px;
     padding: 0;
     white-space: nowrap;
+  }
+
+  .chevron-icon {
+    margin: 10px;
+  }
+
+  .header-breadcrumbs {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
   .actionbtn {
@@ -76,10 +90,14 @@
     transition: none;
     -webkit-transition: none;
     border: 0;
-    fill: #fff;
-    color: #fff;
+    fill: $white;
+    color: $white;
     text-shadow: 0 -1px 0 rgba(0,0,0,.1);
     font-size: 13px;
+
+    &.--blue {
+      background: linear-gradient($light-blue, $dark-blue 60%, $dark-blue 90%, $medium-blue);
+    }
   }
 }
 
